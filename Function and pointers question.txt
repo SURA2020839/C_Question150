@@ -1,0 +1,446 @@
+#include <stdio.h>
+#include <math.h>
+float sum(float a,float b,float c,float d,float e);
+float average(float a,float b,float c,float d,float e);
+float SD(float a,float b,float c,float d,float e);
+int main() 
+{
+    int a,b,c,d,e;
+    float x,y,z;
+    printf("\n Enter the first numbers: " );
+    scanf("%d",&a);
+    printf("\n Enter the second numbers: " );
+     scanf("%d",&b);
+    printf("\n Enter the third numbers: " );
+     scanf("%d",&c);
+    printf("\n Enter the fourth numbers: " );
+     scanf("%d",&d);
+    printf("\n Enter the fifth numbers: " );
+     scanf("%d",&e);
+     x=  sum(a,b,c,d,e);
+     y= average(a,b,c,d,e);
+     z=SD(a,b,c,d,e);
+    printf("the value of Sum is %f \n the value of Average is %f \n the value of SD is %f ",x,y,z );
+}
+
+
+ float sum (float a,float b,float c,float d,float e)
+{
+    int x;
+    x=a+b+c+d+e;
+    return(x);
+}
+float average (float a,float b,float c,float d,float e)
+{
+    float y;
+    y=(a+b+c+d+e)/5;
+    return(y);
+    
+}
+float SD(float a,float b , float c ,float d,float e)
+{
+
+    double t,v,w,x,y,z,m,h,n;
+    t=(a+b+c+d+e)/5;
+  //  printf("%lf",t);
+    v=a-t;
+    w=b-t;
+    x=c-t;
+    y=d-t;
+    z=e-t;
+    m= v*v+w*w+x*x+y*y+z*z;
+    n=m/4;
+    h=pow(1/2,n);
+    printf("%lf",h);
+    return(d);
+    
+}
+_--__-----___---____-----______------_____------_____-----____----
+
+-- FIBBONNAACCII RESCURSIVE 
+#include <stdio.h>
+int rec(int);
+int main()
+{
+    int i,a;
+    printf("Enter the number  : ");
+    scanf("%d",&a);
+    i = rec(a);
+    printf("\n the value of i is %d ",i);
+}
+rec(int a )
+{
+  int i,b=-1,c=1,d;
+  for (i=1;i<=a;i++)
+  {   
+      d=b+c;
+      printf("%d \n ",d);
+      b=c;
+      c=d;
+}
+  return(d);
+}
+
+
+-----------------------------------------------------\\\||||||||||||||||\\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+
+float avg(float,float,float);
+float prcnt(float,float,float);
+int main()
+{
+float s1,s2,s3;
+float average ,percentage;
+printf("Enter the marks of three subject:\n "); 
+ scanf("%f %f %f",&s1,&s2,&s3);
+
+ average =avg(s1,s2,s3);
+  percentage= prcnt(s1,s2,s3);
+printf("The value of Average and percentage is %f %f",average,percentage);
+}
+
+float avg(float s1,float s2, float s3)
+{
+float z;
+z=(s1+s2+s3)/3;
+//printf("%f ",z);
+return(z);
+}
+
+
+float prcnt( float  s1,float s2 , float s3 )
+{
+ float sum ,percentage , Multiplication;
+
+sum = s1+s2+s3;
+//printf("%f",sum);
+percentage= sum/300;
+//printf("%f",percentage);
+Multiplication = percentage * 100;
+// printf("%f",Multiplication );
+return(Multiplication);
+}
+
+
+
+3 	|
+      |
+	\/
+
+#include <stdio.h>
+int sum (int);
+
+int main() {
+int a ,num,m=0,z;
+printf("Enter the number :");
+scanf("%d",&num);
+a =sum(num);
+while(num>0)
+     {
+         z=num%10;
+         m=m+z;
+   // printf("%d\n",m);
+         num=num/10;
+      //   printf("%d \n ",num);
+         
+     }
+     printf("%d\n ",m);
+     printf("%d ---> %d",a,m);
+     
+     return 0;
+}
+     
+     
+     int sum (num)
+     
+     {
+         int n,y,z=0;
+         while (num>0)
+         {
+         
+         y=num%10;
+         z=y+z;
+         num=num/10;
+         }
+         return(z);
+         
+     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+STACK PROGRAM FOR PUSH POP PEEK DISPLAY
+
+#include <stdio.h>
+int stack[100];
+int top=-1;
+int N;
+
+void  main() {
+    int ch;
+    
+    do{
+        printf("Enter choice \n 1:Push\n 2:pop\n3:peek\n 4:display");
+        scanf("%d",&ch);
+        switch int (ch)
+        {
+            case 1 : Push()
+            break;
+            case 2 : pop()
+            break;
+            case 3 :peek()
+            break;
+            case 4 :display()
+            break;
+            default:printf("Invalid Choice");
+      
+        }
+        while (ch!=0);
+        
+        void push()
+        {
+            int x;
+            printf("Enter data :");
+            scanf("%d",&x);
+            if(top==N-1)
+            {
+                printf("Overflow");
+            }
+            else{
+                top++;
+                stack[top]=x;
+            }
+        }
+        void pop()
+        {
+            int item;
+            if (top ==-1)
+            {
+                printf("Underflow");
+            }
+            else
+            {
+                item = stack[top];
+                top--;
+                printf("%d",item);
+            }
+        }
+        void peek()
+        {
+        int k;
+        if (top==-1)
+        {
+            printf("OOPS");
+        }
+        else
+        {
+            printf("%d",stack[top]);
+        }
+        
+    }
+        void display()
+        {
+            int i;
+            for(i=top;i>=0;i--)
+            {
+                printf("%d",stack[i]);
+            }
+        }
+    }
+    
+    
+    
